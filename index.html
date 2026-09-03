@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daring to Dream — A Daily Devotional</title>
+  <meta name="description" content="A daily devotional for those daring to dream, rooted in Scripture and a Zambian heart." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <div class="site-header__brand">
+        <p class="site-header__eyebrow">A daily devotional</p>
+        <h1 class="site-header__title">Daring to Dream</h1>
+      </div>
+      <button type="button" id="open-day-picker" class="btn btn--ghost">Jump to a day</button>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div id="entry-container" class="entry-container">
+      <!-- Devotional entry is rendered here by script.js -->
+    </div>
+
+    <nav class="day-nav" aria-label="Day navigation">
+      <button type="button" id="prev-day" class="btn btn--nav">&larr; Previous</button>
+      <span id="current-day-indicator" class="day-nav__indicator">Day 1 of 365</span>
+      <button type="button" id="next-day" class="btn btn--nav">Next &rarr;</button>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer__tagline">Rooted in Scripture. Written for those daring to dream.</p>
+    <nav class="site-footer__links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </footer>
+
+  <div id="day-picker-overlay" class="day-picker-overlay">
+    <div class="day-picker" role="dialog" aria-modal="true" aria-label="Choose a day">
+      <div class="day-picker__header">
+        <h2>Choose a day</h2>
+        <button type="button" id="close-day-picker" class="btn btn--icon" aria-label="Close">&times;</button>
+      </div>
+      <p class="day-picker__hint">Days still greyed out are being written and will unlock as they're added.</p>
+      <div id="day-grid" class="day-grid"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
